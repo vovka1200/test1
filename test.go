@@ -19,7 +19,7 @@ func (testservice *testService) Test(ctx context.Context, req *TestRequest) (*Te
 }
 
 func main() {
-	if tcpServer, err := net.Listen("tcp", "localhost:8080"); err == nil {
+	if tcpServer, err := net.Listen("tcp", "0.0.0.0:8080"); err == nil {
 		log.WithFields(log.Fields{
 			"addr": tcpServer.Addr(),
 		}).Info("tcpServer")
