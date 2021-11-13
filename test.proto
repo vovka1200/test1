@@ -1,0 +1,17 @@
+syntax = "proto3";
+package main;
+option go_package = "github.com/vovka1200/test1;main";
+
+service TestService {
+
+  rpc Test (TestRequest) returns (TestReply) {}
+
+}
+
+message TestRequest {
+  string inn = 1;
+}
+
+message TestReply {
+  string inn = 1;
+}
