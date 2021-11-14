@@ -1,2 +1,2 @@
-# test1
-Test gRPC
+# testgRPC
+Testing gRPC usage
