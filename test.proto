@@ -1,10 +1,15 @@
 syntax = "proto3";
 package main;
 option go_package = "github.com/vovka1200/test1;main";
+import "google/api/annotations.proto";
 
 service TestService {
 
-  rpc Test (TestRequest) returns (TestReply) {}
+  rpc Test (TestRequest) returns (TestReply) {
+    option (google.api.http) = {
+      get: "/test"
+    };
+  }
 
 }
 
@@ -14,4 +19,7 @@ message TestRequest {
 
 message TestReply {
   string inn = 1;
+  string title = 2;
+  string kpp = 3;
+  string director = 4;
 }
